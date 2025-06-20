@@ -5,16 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newsletter</title>
+    <style>
+        /* Default styles */
+        body {
+            background-color: #eee;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        /* Print-specific styles */
+        @media print {
+            /* Ensure background images and colors are printed */
+            .banner-bg {
+                background-image: none !important;
+            }
+            .banner-img {
+                display: block !important;
+                width: 100%;
+                height: 240px;
+            }
+            div {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            /* Ensure table cells with background colors print correctly */
+            td {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
 </head>
 
-<body style="background-color: #eee; margin: 0; padding: 0;">
-    <table width="600" style="margin: 0 auto; background-color: #ffffff;" cellpadding="0" cellspacing="0" border="0">
+<body>
+    <table width="600" cellpadding="0" cellspacing="0" border="0">
         <!-- First Section -->
         <tr>
-            <td style="background-image: url('https://raw.githubusercontent.com/muzamilbaig123/FinalSignature/refs/heads/master/hero.jpg'); background-size: 100% 240px; background-repeat: no-repeat; padding: 20px;">
-                <table width="100%" style="max-width: 600px;" cellpadding="0" cellspacing="0" border="0">
+            <td style="padding: 20px;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tr>
-                        <td colspan="2" style="height: 200px; line-height: 0; font-size: 0;"> </td>
+                        <td colspan="2" class="banner-bg" style="height: 240px; line-height: 0; font-size: 0;">
+                            <img src="https://raw.githubusercontent.com/muzamilbaig123/FinalSignature/refs/heads/master/hero.jpg" alt="Banner" class="banner-img" />
+                        </td>
                     </tr>
                     <tr>
                         <td width="31%" class="stacked">
@@ -174,7 +209,7 @@
         <!-- Fourth Section -->
         <tr>
             <td style="padding: 20px; text-align: center;">
-                <img src="https://raw.githubusercontent.com/muzamilbaig123/HTML_Signature/refs/heads/master/travel.jpg"
+                <img src="lastbottom.jpeg"
                     style="width: 100%; max-width: 600px; height: auto;" alt="What's Next" class="full-width" />
             </td>
         </tr>
